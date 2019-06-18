@@ -1,0 +1,13 @@
+.media {
+    margin-bottom: 15px;
+}
+
+.comment-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-name .btn {
+    margin-left: 5px;
+}
