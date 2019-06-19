@@ -70,9 +70,11 @@ export class Comment extends React.Component {
     componentDidMount() {
         if (window.isElectron) {
             ReactDOM.findDOMNode(this).addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.openLink(e.target.href);
+                if (e.target.nodeName.toUpperCase() === 'A') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.openLink(e.target.href);
+                }
             });
         }
     }
